@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/home.css">
+<h1>Todos os meus livros favoritos: </h1>
+{{#each books}}
+<div class="book">
+  <p>Título: {{title}}</p>
+  <p>Autor: {{author}}</p>
+  {{#if client}}
+    <p>Alugado por: {{client.name}}</p>
+  {{else}}
+    <p>Ainda não foi alugado</p>
+  {{/if}}
+  <a class="button" href="/book/update/{{_id}}">
+    <button>
+      <p>Atualizar</p>
+    </button>
+  </a>
+  {{#if client}}
+    <a class="button" href="/book/devolve/{{_id}}">
+      <button>
+        <p>Devolver</p>
+      </button>
+    </a>
+  {{else}}
+    <a class="button" href="/book/rent/{{_id}}">
+      <button>
+        <p>Alugar</p>
+      </button>
+    </a>
+  {{/if}}
+  <a class="button" href="/book/delete/{{_id}}">
+    <button>
+      <p>Deletar</p>
+    </button>
+  </a>
+</div>
+{{/each}}

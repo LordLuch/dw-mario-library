@@ -1,0 +1,14 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "lint": "eslint --fix"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0"
+  }
+}

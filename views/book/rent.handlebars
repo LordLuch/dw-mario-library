@@ -1,0 +1,38 @@
+{{#if book}}
+<form action="/book/rent/{{book._id}}" method="post">
+  <div class="book">
+    <p>Título: {{book.title}}</p>
+    <p>Autor: {{book.author}}</p>
+  </div>
+  <link rel="stylesheet" href="/css/cu.css">
+  <p>Escolha quem irá alugar</p>
+  <select name="to_rent">
+    {{#each clients}}
+    <option value="{{_id}}">{{name}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">Alugar</button>
+</form>
+{{/if}}
+<style>
+  form {
+    width: 270px !important;
+    align-items: center;
+  }
+
+  .book {
+    width: 100% !important;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 400px) {
+    form {
+      width: 360px !important;
+    }
+  }
+</style>

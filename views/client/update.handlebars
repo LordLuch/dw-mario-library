@@ -1,0 +1,10 @@
+{{#if client}}
+<form action="/client/update/{{client._id}}" method="post">
+  <link rel="stylesheet" href="/css/cu.css">
+  <div class="form-control">
+    <input type="text" name="name" value="{{client.name}}" required />
+    <label>Nome</label>
+  </div>
+  <button type="submit">Atualizar</button>
+</form>
+{{/if}}

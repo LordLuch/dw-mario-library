@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/home.css">
+<h1>Todos os clientes registrados: </h1>
+{{#each clients}}
+<div class="book">
+  <p>Nome: {{name}}</p>
+  <a class="button" href="/client/update/{{_id}}">
+    <button>
+      <p>Atualizar</p>
+    </button>
+  </a>
+  <a class="button" href="/client/delete/{{_id}}">
+    <button>
+      <p>Deletar</p>
+    </button>
+  </a>
+</div>
+{{/each}}
